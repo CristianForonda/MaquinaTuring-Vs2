@@ -1,0 +1,133 @@
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Máquinas de Turing</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="vis/dist/vis.css">    
+    </head>
+
+    <body>
+
+        <div class="contenedor">
+
+            <header class="header">
+                <h2>MAQUINA DE TURING</h2>
+            </header>
+
+            <div id="mynetwork"></div>
+
+            <center>
+                <div class="d-block">
+                    <div class="col-6 my-3">
+
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" placeholder="Cadena" id="cadena">
+
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button" id="cargar" data-toggle="popover1" title="Error de entrada"  data-content="La cadena está vacía." data-placemente="right" data-trigger="focus">Cargar</button>
+                                <button class="btn btn-secondary" id="info"><strong><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg></strong></button>
+                            </span>    
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-3 my-4">
+                        <div class="estado">
+                            <h2 class="lead">Estado: <span id="estado">0</span></h2>
+                        </div>
+                        
+
+                        <div class="slidecontainer">
+                            Velocidad:<br>
+                            <input type="range" min="0" max="1000" value="500"  step="100"class="slider" id="rango"><p></p>
+                        </div>
+
+                        <div class="btn-group" role="group" aria-label="Funciones">
+                            <button class="btn btn-danger" id="evaluar" content="1"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                              </svg></button>
+                            <button class="btn btn-warning" id="evaluar" content="1" onclick="Stop();"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pause-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                              </svg></button>
+                        </div>  
+
+                    </div>
+
+                </div>
+            </center>
+            
+            <div class="eva">
+
+                <div class="tab-pane"  role="tabpanel">
+
+                    <center>
+    
+                        <div class="d-inline ">
+    
+                            <div class="col-10">
+    
+                                <table id="tabla4" class="table table-hover text-center table-responsive">
+                                    <tbody>
+                                    </tbody>
+                                </table>
+    
+                            </div>    
+    
+                        </div>
+    
+                    </center>
+    
+                </div>
+
+            </div>
+
+            
+
+            <div class="modal fade" id="instrucciones4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle"><h2>MAQUINA DE TURING</h2></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Actividad:</h5>
+                            <p class="text-center">
+                                Construya una máquina de Turing que analice una cadena sobre {a,b, } y cambie todas sus bes y espacios por aes. La cabeza inicia sobre el primer simbolo de la izquierda y debe terminar sobre este simbolo.
+                            </p>
+                            <h5>Ejemplos:</h5>
+                            <p class="text-center">
+                                q->a b a bab<br>
+                                Q->aaaaaaaa<br>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="scripts/jquery.js"></script>
+            <script type="text/javascript" src="scripts/bootstrap.js"></script>
+            <script type="text/javascript" src="scripts/turing.js"></script>
+            <script type="text/javascript" src="scripts/ui.js"></script>
+            <script type="text/javascript" src="vis/dist/vis.js"></script>
+            <script type="text/javascript" src="scripts/graph.js"></script>
+
+            <footer class="footer">
+                <h3>Cristian Foronda - Gustavo Solano - Jorge Villarreal</h3>
+            </footer>
+
+        </div>
+    </body>
+</html>

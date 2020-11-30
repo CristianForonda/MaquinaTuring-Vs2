@@ -1,0 +1,118 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.btn-info{
+  color: aliceblue;  font-family: 'Courier New', Courier, monospace;
+  background:#008060;
+  position: relative;
+  left: 20px;
+}
+
+.btn-danger{
+  border-radius: 50px;
+  background: green;
+  border-color: green;
+}
+
+.btn-warning{
+  border-radius: 50px;
+  background: red;
+  border-color: red;
+}
+
+.btn-secondary{
+  position: relative;
+  border-radius: 50px;
+  top: -297px;
+  color: aliceblue;  font-family: 'Courier New', Courier, monospace;
+  background:#008060;
+  height: 40px;
+}
+
+
+body {
+  background: #0D7B89;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+.estado{
+  color: rgb(31, 32, 32);  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  top: -104px;
+}
+
+.slidecontainer{
+  color: rgb(60, 61, 61);  font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-pane{
+  color: rgb(22, 22, 22);  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(253, 251, 251, 0.705);
+  width: 60%;
+  position: relative;
+  left: 260px;
+  border-radius: 5px;
+}
+
+#mynetwork {
+  position: relative;
+  left: 260px;
+  width: 60%;
+  height: 230px;
+  text-align: center;
+  background: #ffffffc2;
+  border-radius: 5px;
+}
+
+
+.contenedor{
+  width: 100%;
+  margin: 10px auto;
+  grid-gap: 10px;
+  grid-template-rows: repeat(8, auto) ; 
+}
+
+
+.cabecera {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .footer{
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.contenedor .header{
+  background:#002E25;
+  color: aliceblue;  font-family: 'Courier New', Courier, monospace;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.contenedor .footer{
+  background: #002E25;
+  color: aliceblue;  font-family: 'Courier New', Courier, monospace;
+  margin: 5px;
+  width: 99%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 606px;
+}
+
